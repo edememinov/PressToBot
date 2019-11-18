@@ -24,6 +24,14 @@ namespace EchoBot.Dialogs
                 reply.Attachments.Add(SomeCardImage.GetHeroCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
+            else if (turnContext.Activity.Text.ToLower().Contains("are you as smart as ai"))
+            {
+                await turnContext.SendActivityAsync("No, I am dumb AF");
+            }
+            else if (turnContext.Activity.Text.Split()[1].ToLower().Equals("help"))
+            {
+                await turnContext.SendActivityAsync("No, I am dumb AF");
+            }
 
         }
     }
