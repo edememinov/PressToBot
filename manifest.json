@@ -1,0 +1,66 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.5",
+    "version": "1.0.0",
+    "id": "1e18ff8e-81f5-4122-a2b1-857de353aff9",
+    "packageName": "com.respectpayer",
+    "developer": {
+        "name": "Me",
+        "websiteUrl": "https://cm.com/privacy",
+        "privacyUrl": "https://cm.com/privacy",
+        "termsOfUseUrl": "https://cm.com/privacy"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "RespectPayer",
+        "full": "This is some bot that pays respect"
+    },
+    "description": {
+        "short": "This bot pays respect",
+        "full": "Some times respect has to be paid, this is one of those times"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "1e18ff8e-81f5-4122-a2b1-857de353aff9",
+            "scopes": [
+                "groupchat",
+                "personal"
+            ],
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal"
+                    ],
+                    "commands": [
+                        {
+                            "title": "press f to pay respect",
+                            "description": "press f"
+                        }
+                    ]
+                },
+                {
+                    "scopes": [
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "press f to pay respect",
+                            "description": "press f"
+                        }
+                    ]
+                }
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}
