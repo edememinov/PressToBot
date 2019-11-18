@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using EchoBot.Cards;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
 
 namespace EchoBot.Dialogs
 {
-    public class CheckCenterBot : ActivityHandler
+    public class PressToBot : ActivityHandler
     {
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {

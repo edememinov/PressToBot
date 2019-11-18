@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Bot.Schema;
 
-namespace EchoBot
+namespace EchoBot.Cards
 {
     public static class Card
     {
