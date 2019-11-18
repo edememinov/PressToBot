@@ -21,7 +21,14 @@ namespace EchoBot.Dialogs
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
-                reply.Attachments.Add(SomeCardImage.GetHeroCard().ToAttachment());
+                reply.Attachments.Add(PressFForRespectImage.GetHeroCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("noice") || turnContext.Activity.Text.ToLower().Split()[1].Equals("nice"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(NoiceImage.GetNoiceCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
             else if (turnContext.Activity.Text.ToLower().Contains("are you as smart as ai"))

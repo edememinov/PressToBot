@@ -21,7 +21,9 @@ namespace EchoBot.Cards
         }
     }
 
-    public static class SomeCardImage
+    
+
+    public static class PressFForRespectImage
     {
         public static HeroCard GetHeroCard()
         {
@@ -32,6 +34,22 @@ namespace EchoBot.Cards
                 Images = new List<CardImage>()
             };
             card.Images.Add(new CardImage ("https://media.gq.com/photos/55828d4fe52bc4b477a98493/master/w_1600%2Cc_limit/blogs-the-feed-call-of-duty-pay-f-to-pay-respects.jpg"));
+
+            return card;
+        }
+    }
+
+     public static class NoiceImage
+    {
+        public static HeroCard GetNoiceCard()
+        {
+            HeroCard card = new HeroCard
+            {
+                Title = "Click",
+                Text = "Noice",
+                Images = new List<CardImage>()
+            };
+            card.Images.Add(new CardImage ("https://discordemoji.com/assets/emoji/3142_noice.png"));
 
             return card;
         }
