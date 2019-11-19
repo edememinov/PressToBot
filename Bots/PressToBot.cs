@@ -35,6 +35,10 @@ namespace EchoBot.Dialogs
             {
                 await turnContext.SendActivityAsync("No, I am dumb AF");
             }
+            if (turnContext.Activity.Text.ToLower().Contains("i am sad"))
+            {
+                await turnContext.SendActivityAsync("Shut up, no one cares.");
+            }
             else if (turnContext.Activity.Text.Split()[1].ToLower().Equals("help"))
             {
                 await turnContext.SendActivityAsync("Oh, boy, the things I can do are basically nonexistent. Try typing F or ask me if I'm  as smart as ai.");
