@@ -11,7 +11,7 @@ namespace EchoBot.Dialogs
     {
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
-           if(turnContext.Activity.Text.ToLower().Contains("press f to get gif") || turnContext.Activity.Text.Contains("F for gif"))
+           if(turnContext.Activity.Text.ToLower().Contains("press f to get gif") || turnContext.Activity.Text.ToLower().Contains("f for gif"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
