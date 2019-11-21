@@ -185,5 +185,52 @@ namespace EchoBot.Cards
 
             return card;
         }
+    } 
+    
+    public static class StupidImage
+    {
+        public static HeroCard GetCard()
+        {
+            HeroCard card = new HeroCard
+            {
+                Title = "Bruh",
+                Text = "You stupid",
+                Images = new List<CardImage>()
+            };
+            card.Images.Add(new CardImage ("https://media.makeameme.org/created/are-you-stupid-5b7fdf.jpg"));
+
+            return card;
+        }
+    }
+    
+    public static class DumbImage
+    {
+        public static HeroCard GetCard()
+        {
+            HeroCard card = new HeroCard
+            {
+                Title = "Why you so dumb?",
+                Text = "That's stupid",
+                Images = new List<CardImage>()
+            };
+            card.Images.Add(new CardImage ("https://sayingimages.com/wp-content/uploads/cant-look-dumb-meme.jpg"));
+
+            return card;
+        }
+    }
+    public static class ThankImage
+    {
+        public static HeroCard GetCard()
+        {
+            HeroCard card = new HeroCard
+            {
+                Title = "Seriously mate",
+                Text = "Thanks",
+                Images = new List<CardImage>()
+            };
+            card.Images.Add(new CardImage ("https://www.lifewire.com/thmb/vSw2v3PAb26c6QLm23qGqCCdC1g=/2000x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/LiamNeesonThankYou-5b0833c4119fa80037960211.jpg"));
+
+            return card;
+        }
     }
 }

@@ -80,11 +80,32 @@ namespace EchoBot.Dialogs
                 reply.Attachments.Add(AlexaImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
+            else if (turnContext.Activity.Text.ToLower().Contains("you're stupid") || turnContext.Activity.Text.ToLower().Split()[1].Equals("stupid") || turnContext.Activity.Text.ToLower().Contains("you are stupid"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(StupidImage.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
             else if (turnContext.Activity.Text.ToLower().Contains("rip"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
                 reply.Attachments.Add(RipImage.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("thank"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(ThankImage.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("dumb"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(DumbImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
             else if (turnContext.Activity.Text.ToLower().Contains("are you as smart as ai"))
