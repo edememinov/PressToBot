@@ -24,14 +24,21 @@ namespace EchoBot.Dialogs
                 reply.Attachments.Add(PressFForRespectImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Contains("noice") || turnContext.Activity.Text.ToLower().Split()[1].Equals("nice"))
+            else if (turnContext.Activity.Text.ToLower().Split()[1].Equals("noice") || turnContext.Activity.Text.ToLower().Split()[1].Equals("nice"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
                 reply.Attachments.Add(NoiceImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Contains("shame") || turnContext.Activity.Text.ToLower().Split()[1].Equals("shame"))
+            else if (turnContext.Activity.Text.ToLower().Contains("be ashamed of yourself")  || turnContext.Activity.Text.ToLower().Split()[3].Equals("ashamed"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(ShameGotImage.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("that's a shame") || turnContext.Activity.Text.ToLower().Contains("that is a shame"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
@@ -59,21 +66,21 @@ namespace EchoBot.Dialogs
                 reply.Attachments.Add(DrinkyTime.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Contains("wow"))
+            else if (turnContext.Activity.Text.ToLower().Split()[1].Equals("wow"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
                 reply.Attachments.Add(WowImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Contains("pepe") || turnContext.Activity.Text.ToLower().Split()[1].Equals("sad"))
+            else if (turnContext.Activity.Text.ToLower().Split()[1].Equals("pepe") || turnContext.Activity.Text.ToLower().Split()[1].Equals("sad"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
                 reply.Attachments.Add(PepeImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Contains("play despacito ") || turnContext.Activity.Text.ToLower().Split()[1].Equals("alexa"))
+            else if (turnContext.Activity.Text.ToLower().Contains("play despacito") || turnContext.Activity.Text.ToLower().Split()[1].Equals("alexa"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
@@ -87,27 +94,28 @@ namespace EchoBot.Dialogs
                 reply.Attachments.Add(StupidImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Contains("rip"))
+            else if (turnContext.Activity.Text.ToLower().Split()[1].Equals("rip"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
                 reply.Attachments.Add(RipImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Contains("thank"))
+            else if (turnContext.Activity.Text.ToLower().Split()[1].Equals("thank"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
                 reply.Attachments.Add(ThankImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Contains("dumb"))
+            else if (turnContext.Activity.Text.ToLower().Contains("is dumb"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
                 reply.Attachments.Add(DumbImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
+            
             else if (turnContext.Activity.Text.ToLower().Contains("are you as smart as ai"))
             {
                 await turnContext.SendActivityAsync("No, I am dumb AF");
@@ -119,17 +127,19 @@ namespace EchoBot.Dialogs
             else if (turnContext.Activity.Text.Split()[1].ToLower().Equals("help"))
             {
                 await turnContext.SendActivityAsync("Oh, boy, the things I can do are basically nonexistent. Try typing F or ask me if I'm  as smart as ai." +
-                    "\n I can also do drinky time" +
-                    "\n Shame" +
-                    "\n Mah heart mah soul" +
-                    "\n Noice" +
-                    "\n I can help you when you're sad" +
-                    "\n press b to blow" +
-                    "\n Drinky time" +
-                    "\n play decpacito" +
-                    "\n Wow" +
-                    "\n pepe" +
-                    "\n rip");
+                    "\n I can also do drinky time." +
+                    "\n That's a shame." +
+                    "\n You should be ashamed of yourself" +
+                    "\n Mah heart mah soul." +
+                    "\n Noice." +
+                    "\n I can help you when you're sad." +
+                    "\n Press b to blow." +
+                    "\n Drinky time." +
+                    "\n Play decpacito." +
+                    "\n Wow." +
+                    "\n Pepe." +
+                    "\n Rip." +
+                    "\n Thank you.");
             }
 
         }

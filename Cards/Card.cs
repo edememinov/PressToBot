@@ -228,7 +228,22 @@ namespace EchoBot.Cards
                 Text = "Thanks",
                 Images = new List<CardImage>()
             };
-            card.Images.Add(new CardImage ("https://www.lifewire.com/thmb/vSw2v3PAb26c6QLm23qGqCCdC1g=/2000x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/LiamNeesonThankYou-5b0833c4119fa80037960211.jpg"));
+            card.Images.Add(new CardImage ("https://pics.me.me/i-dont-know-who-you-are-but-i-will-findyou-14853991.png"));
+
+            return card;
+        }
+    } 
+    public static class ShameGotImage
+    {
+        public static HeroCard GetCard()
+        {
+            HeroCard card = new HeroCard
+            {
+                Title = "Shame!",
+                Text = "Shame! Shame! Shame!",
+                Images = new List<CardImage>()
+            };
+            card.Images.Add(new CardImage ("https://i.pinimg.com/474x/ae/57/59/ae5759ac2b9850759aeeb4be5746ffa6--game-tumblr.jpg"));
 
             return card;
         }
