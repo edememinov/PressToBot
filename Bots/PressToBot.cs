@@ -73,11 +73,11 @@ namespace EchoBot.Dialogs
                 reply.Attachments.Add(PepeImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Contains("play decpacito") || turnContext.Activity.Text.ToLower().Split()[1].Equals("alexa"))
+            else if (turnContext.Activity.Text.ToLower().Contains("play despacito ") || turnContext.Activity.Text.ToLower().Split()[1].Equals("alexa"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
-                reply.Attachments.Add(PepeImage.GetCard().ToAttachment());
+                reply.Attachments.Add(AlexaImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
             else if (turnContext.Activity.Text.ToLower().Contains("rip"))
