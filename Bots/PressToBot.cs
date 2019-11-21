@@ -52,6 +52,41 @@ namespace EchoBot.Dialogs
                 reply.Attachments.Add(BToBlow.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
+            else if (turnContext.Activity.Text.ToLower().Contains("drinky time") || turnContext.Activity.Text.ToLower().Split()[1].Equals("drinky"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(DrinkyTime.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("wow"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(WowImage.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("pepe") || turnContext.Activity.Text.ToLower().Split()[1].Equals("sad"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(PepeImage.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("play decpacito") || turnContext.Activity.Text.ToLower().Split()[1].Equals("alexa"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(PepeImage.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("rip"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(RipImage.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
             else if (turnContext.Activity.Text.ToLower().Contains("are you as smart as ai"))
             {
                 await turnContext.SendActivityAsync("No, I am dumb AF");
@@ -62,7 +97,18 @@ namespace EchoBot.Dialogs
             }
             else if (turnContext.Activity.Text.Split()[1].ToLower().Equals("help"))
             {
-                await turnContext.SendActivityAsync("Oh, boy, the things I can do are basically nonexistent. Try typing F or ask me if I'm  as smart as ai.");
+                await turnContext.SendActivityAsync("Oh, boy, the things I can do are basically nonexistent. Try typing F or ask me if I'm  as smart as ai." +
+                    "\n I can also do drinky time" +
+                    "\n Shame" +
+                    "\n Mah heart mah soul" +
+                    "\n Noice" +
+                    "\n I can help you when you're sad" +
+                    "\n press b to blow" +
+                    "\n Drinky time" +
+                    "\n play decpacito" +
+                    "\n Wow" +
+                    "\n pepe" +
+                    "\n rip");
             }
 
         }
