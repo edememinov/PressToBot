@@ -15,20 +15,41 @@ namespace EchoBot.Dialogs
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
-                reply.Attachments.Add(Card.GetHeroCard().ToAttachment());
+                reply.Attachments.Add(Card.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             } else if (turnContext.Activity.Text.ToLower().Contains("press f to pay respect") || turnContext.Activity.Text.Split()[1].Equals("F"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
-                reply.Attachments.Add(PressFForRespectImage.GetHeroCard().ToAttachment());
+                reply.Attachments.Add(PressFForRespectImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
             else if (turnContext.Activity.Text.ToLower().Contains("noice") || turnContext.Activity.Text.ToLower().Split()[1].Equals("nice"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
-                reply.Attachments.Add(NoiceImage.GetNoiceCard().ToAttachment());
+                reply.Attachments.Add(NoiceImage.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("shame") || turnContext.Activity.Text.ToLower().Split()[1].Equals("shame"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(Shame.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("mah heart mah soul"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(MahHeartMahSoul.GetCard().ToAttachment());
+                await turnContext.SendActivityAsync(reply, cancellationToken);
+            }
+            else if (turnContext.Activity.Text.ToLower().Contains("press b to blow") || turnContext.Activity.Text.ToLower().Split()[1].Equals("b"))
+            {
+                var attachments = new List<Attachment>();
+                var reply = MessageFactory.Attachment(attachments);
+                reply.Attachments.Add(BToBlow.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
             else if (turnContext.Activity.Text.ToLower().Contains("are you as smart as ai"))
