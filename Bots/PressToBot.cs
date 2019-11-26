@@ -31,13 +31,6 @@ namespace EchoBot.Dialogs
                 reply.Attachments.Add(NoiceImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Contains("be ashamed of yourself")  || turnContext.Activity.Text.ToLower().Split()[3].Equals("ashamed"))
-            {
-                var attachments = new List<Attachment>();
-                var reply = MessageFactory.Attachment(attachments);
-                reply.Attachments.Add(ShameGotImage.GetCard().ToAttachment());
-                await turnContext.SendActivityAsync(reply, cancellationToken);
-            }
             else if (turnContext.Activity.Text.ToLower().Contains("that's a shame") || turnContext.Activity.Text.ToLower().Contains("that is a shame"))
             {
                 var attachments = new List<Attachment>();
@@ -101,7 +94,7 @@ namespace EchoBot.Dialogs
                 reply.Attachments.Add(RipImage.GetCard().ToAttachment());
                 await turnContext.SendActivityAsync(reply, cancellationToken);
             }
-            else if (turnContext.Activity.Text.ToLower().Split()[1].Equals("thank"))
+            else if (turnContext.Activity.Text.ToLower().Split()[1].Equals("thanks"))
             {
                 var attachments = new List<Attachment>();
                 var reply = MessageFactory.Attachment(attachments);
@@ -141,6 +134,17 @@ namespace EchoBot.Dialogs
                     "\n Rip." +
                     "\n Thank you.");
             }
+            else if (turnContext.Activity.Text.Split().Length > 3)
+            {
+                if (turnContext.Activity.Text.ToLower().Contains("be ashamed of yourself") || turnContext.Activity.Text.ToLower().Split()[3].Equals("ashamed"))
+                {
+                    var attachments = new List<Attachment>();
+                    var reply = MessageFactory.Attachment(attachments);
+                    reply.Attachments.Add(ShameGotImage.GetCard().ToAttachment());
+                    await turnContext.SendActivityAsync(reply, cancellationToken);
+                }
+            }
+            
 
         }
     }

@@ -145,11 +145,11 @@ namespace EchoBot.Cards
         {
             HeroCard card = new HeroCard
             {
-                Title = "RIP",
-                Text = "Rest In Peace",
+                Title = "Rest In Peace",
+                Text = "Good bye cruel world",
                 Images = new List<CardImage>()
             };
-            card.Images.Add(new CardImage ("https://i.imgflip.com/ub0kp.jpg"));
+            card.Images.Add(new CardImage ("https://cdn.joke4fun.com/media/posts/00000/2wlp03e0pmkz.jpg"));
 
             return card;
         }
@@ -228,7 +228,7 @@ namespace EchoBot.Cards
                 Text = "Thanks",
                 Images = new List<CardImage>()
             };
-            card.Images.Add(new CardImage ("https://pics.me.me/i-dont-know-who-you-are-but-i-will-findyou-14853991.png"));
+            card.Images.Add(new CardImage ("https://winkgo.com/wp-content/uploads/2019/10/thank-you-memes-10-720x393.jpg"));
 
             return card;
         }
@@ -243,7 +243,7 @@ namespace EchoBot.Cards
                 Text = "Shame! Shame! Shame!",
                 Images = new List<CardImage>()
             };
-            card.Images.Add(new CardImage ("https://i.pinimg.com/474x/ae/57/59/ae5759ac2b9850759aeeb4be5746ffa6--game-tumblr.jpg"));
+            card.Images.Add(new CardImage ("https://i.ytimg.com/vi/SrDSqODtEFM/hqdefault.jpg"));
 
             return card;
         }
